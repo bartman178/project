@@ -14,7 +14,7 @@ public partial class directory : System.Web.UI.Page
         XmlDocument doc = new XmlDocument();
         try
         {
-            string file = @"\XMLFile1.xml";
+            string file = @"\directory.xml";
             string rel_dir = HttpContext.Current.ApplicationInstance.Server.MapPath("~/App_Data");
             string absolute_path = rel_dir + file;
 
@@ -28,7 +28,8 @@ public partial class directory : System.Web.UI.Page
                 Response.Write("*** File " + absolute_path + "does not exist. <br />");
             }
 
-            XmlNodeList allItems = doc.GetElementsByTagName("item");
+            XmlNodeList allItems = doc.GetElementsByTagName("OrganisationName");
+
             for (int i = 0; i < allItems.Count; i++)
             {
                 ListBox1.Items.Add(allItems[i].InnerText);
