@@ -41,7 +41,7 @@ public partial class directory : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        Response.Redirect("addToDirectory.aspx");
+        Server.Transfer("addToDirectory.aspx");
 
     }
     protected void ListBox1_SelectedIndexChanged1(object sender, EventArgs e)
@@ -50,6 +50,6 @@ public partial class directory : System.Web.UI.Page
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
-        Response.Redirect("default.aspx");
+        Server.Transfer("default.aspx");
     }
 }

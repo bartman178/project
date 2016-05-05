@@ -15,20 +15,20 @@ public partial class Default2 : System.Web.UI.Page
     }
     protected void Button4_Click(object sender, EventArgs e)
     {
-        Response.Redirect("help.aspx");
+        Server.Transfer("help.aspx");
     }
     protected void Button3_Click(object sender, EventArgs e)
     {
-        Response.Redirect("addToDirectory.aspx");
+        Server.Transfer("addToDirectory.aspx");
     }
     protected void logOut_Click(object sender, EventArgs e)
     {
         Session.RemoveAll();
         Session.Abandon();
-        Response.Redirect("login.aspx");
+        Server.Transfer("login.aspx");
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
-        Response.Redirect("directory.aspx");
+        Server.Transfer("directory.aspx");
     }
 }
