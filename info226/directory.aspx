@@ -16,7 +16,7 @@
     <div>
         <h3>Search the Directory</h3> <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><asp:Button ID="Button3" runat="server" Text="Go" />
         <br />
-        <asp:ListBox ID="ListBox1" runat="server">
+        <asp:ListBox ID="ListBox1" runat="server" Height="184px" Width="519px">
 
 
         </asp:ListBox>

@@ -22,13 +22,13 @@
             <h4>Post Code</h4><asp:TextBox ID="tbPostCode" runat="server"></asp:TextBox>
         <h2>Contact Information (Business)</h2>
             <h4>Business Email</h4><asp:TextBox ID="tbEmail" runat="server"></asp:TextBox>
-            <h4>Business Phone</h4><asp:TextBox ID="tbBusPhone" runat="server"></asp:TextBox>
+            <h4>Business Phone</h4><asp:TextBox ID="tbPhone" runat="server"></asp:TextBox>
         <h2>Contact Information (Person Responsible)</h2>
             <h4>Name</h4><asp:TextBox ID="tbContactName" runat="server"></asp:TextBox>
             <h4>Email</h4><asp:TextBox ID="tbContactEmail" runat="server"></asp:TextBox>
-            <h4>Work phone</h4><asp:TextBox ID="tbWorkPhone" runat="server"></asp:TextBox>
+            <h4>Work phone</h4><asp:TextBox ID="tbContactPhone" runat="server"></asp:TextBox>
         <h2>General Building Information</h2>
-            <h4>Last maintenance Date</h4><asp:Calendar ID="calLastDate" runat="server"></asp:Calendar>
+            <h4>Last maintenance Date</h4><asp:TextBox ID="tbLastDate" runat="server"></asp:TextBox>
             <h4>Last contractor</h4><asp:TextBox ID="tbContractor" runat="server"></asp:TextBox>
             <h4>Building inspector notes</h4><asp:TextBox ID="tbNotes" runat="server"></asp:TextBox>
             <h4>Required maintenance work</h4><asp:TextBox ID="tbMaintenance" runat="server"></asp:TextBox>
