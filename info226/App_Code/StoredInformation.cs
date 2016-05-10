@@ -8,5 +8,5 @@ using System.Web;
 /// </summary>
 public static class StoredInformation
 {
-    public List<Organisation> organisationDatabase = new List<Organisation>();
+    public static List<Organisation> organisationDb = new List<Organisation>();
 }

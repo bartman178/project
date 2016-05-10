@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 public partial class _Default : System.Web.UI.Page
 {
     Organisation testOrganisation = new Organisation("place", "street", "town", "code", "email", "number");
-    StoredInformation.organisationDatabase.Add(testOrganisation);
+   // StoredInformation.organisationDb.Add testOrganisation ; fix later //
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -19,7 +19,6 @@ public partial class _Default : System.Web.UI.Page
         tbEmail.Text = testOrganisation.email;
         tbWorkPhone.Text = testOrganisation.phoneNumber;
 
-        directoryName.Text = Session["organisation"].ToString();
     }
     protected void Button2_Click(object sender, EventArgs e)
     {

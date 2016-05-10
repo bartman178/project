@@ -11,8 +11,7 @@
     <form id="form1" runat="server">
     <div>
         <asp:Button ID="Button2" runat="server" Text="back to home" OnClick="Button2_Click" />
-        <asp:ListBox ID="ListBox1" runat="server"
-            OnSelectedIndexChanged="ListBox1_SelectedIndexChanged1">
+        <asp:ListBox ID="ListBox1" runat="server">
 
 
         </asp:ListBox>

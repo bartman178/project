@@ -42,12 +42,8 @@ public partial class directory : System.Web.UI.Page
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
-        Server.Transfer("addToDirectory.aspx");
+        Response.Redirect("addToDirectory.aspx");
 
-    }
-    protected void ListBox1_SelectedIndexChanged1(object sender, EventArgs e)
-    {
-        Session["organisation"] = ListBox1.SelectedItem.ToString();
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
