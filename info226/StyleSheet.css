@@ -1,6 +1,17 @@
 ﻿h1 { 
     color:blue;
+
+    font-family: Arial;
 }
 body {
-    background-color:lightgray;
+    background-color:lightblue;
+  
+     font-family: Arial;
+     text-align: center;
+     
 }
+p {
+    font-family: Arial;
+    
+}
+
