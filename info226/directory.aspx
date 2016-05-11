@@ -14,7 +14,8 @@
     
     <form id="form1" runat="server">
     <div>
-        <h3>Search the Directory</h3> <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><asp:Button ID="Button3" runat="server" Text="Go" />
+        <h3>Search the Directory</h3> <asp:TextBox ID="tbSearch" runat="server"></asp:TextBox><asp:Button ID="Search" runat="server" Text="Go" OnClick="Search_Click" />
+        <asp:Label ID="lblError" runat="server"></asp:Label>
         <br />
         <asp:ListBox ID="ListBox1" runat="server" Height="184px" Width="519px">
 
@@ -22,8 +23,8 @@
         </asp:ListBox>
     
     </div>
-        <asp:Button ID="Button2" runat="server" Text="Back To Home" OnClick="Button2_Click" />
-        <asp:Button ID="Button1" runat="server" Text="Edit" OnClick="Button1_Click" style="height: 26px" />
+        <asp:Button ID="Home" runat="server" Text="Back To Home" OnClick="Home_Click" />
+        <asp:Button ID="Edit" runat="server" Text="Edit" OnClick="Edit_Click" style="height: 26px" />
     </form>
 </body>
 </html>

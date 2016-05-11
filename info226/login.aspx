@@ -7,6 +7,37 @@
     <title></title>
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="-1" />
+    <style>
+        body
+        {
+           font-family: sans-serif, Arial, Helvetica, Verdana;
+           background-color: lightblue;
+        }
+
+        fieldset
+        {
+             padding: 1em;
+        }
+
+        legend
+        {
+            margin-bottom: .5em;
+        }
+
+
+        label
+        {
+            margin-right: 0.5em;
+            padding-top: 0.5em;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        input
+        {
+            margin-bottom: .5em;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -28,5 +59,7 @@
             <asp:Label ID="lblMsg" ForeColor="red" Font-Name="Verdana" Font-Size="10" runat="server" />
         </fieldset>
     </form>
+ 
 </body>
+
 </html>

@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 using System.IO;
+using System.Windows;
 
 public partial class directory : System.Web.UI.Page
 {
@@ -40,13 +41,17 @@ public partial class directory : System.Web.UI.Page
             ListBox1.Items.Add("Empty!");
         }
     }
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void Edit_Click(object sender, EventArgs e)
     {
         Response.Redirect("addToDirectory.aspx");
 
     }
-    protected void Button2_Click(object sender, EventArgs e)
+    protected void Home_Click(object sender, EventArgs e)
     {
         Server.Transfer("default.aspx");
+    }
+    protected void Search_Click(object sender, EventArgs e)
+    {
+
     }
 }
