@@ -32,7 +32,7 @@
             <h4>Last contractor</h4><asp:TextBox ID="tbContractor" runat="server"></asp:TextBox>
             <h4>Building inspector notes</h4><asp:TextBox ID="tbNotes" runat="server"></asp:TextBox>
             <h4>Required maintenance work</h4><asp:TextBox ID="tbMaintenance" runat="server"></asp:TextBox>
-        <br /><br /><asp:Button ID="Button1" runat="server" Text="Submit form" />
+        <br /><br /><asp:Button ID="Button1" runat="server" Text="Submit form" OnClick="Button1_Click" />
     </div>
     </form>
 </body>

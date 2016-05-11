@@ -32,46 +32,10 @@ public partial class _Default : System.Web.UI.Page
     }
     protected void Button2_Click(object sender, EventArgs e)
     {
-        try
-        {
-            string file = @"\buildings.xml";
-            string rel_dir = HttpContext.Current.ApplicationInstance.Server.MapPath("~/App_Data");
-            string absolute_path = rel_dir = file;
-
-
-            if (File.Exists(absolute_path))
-            {
-                File.Delete(absolute_path);
-            }
-
-
-            StreamWriter newFile = File.CreateText(absolute_path);
-
-            XmlDocument doc = new XmlDocument();
-
-            XmlNode rootNode = doc.CreateElement("buildings");
-
-            XmlNode entityNode = doc.CreateElement("Entity");
-            entityNode.InnerText = tbCompName.Text;
-            XmlAttribute attribute = doc.CreateAttribute("Building Name");
-            attribute.Value = tbBuildName.Text;
-            entityNode.Attributes.Append(attribute);
-            attribute = doc.CreateAttribute("Full Name");
-            attribute.Value = tbCompName.Text;
-            entityNode.Attributes.Append(attribute);
-            rootNode.AppendChild(entityNode);
-
-            doc.AppendChild(rootNode);
-            doc.Save(newFile);
-        }
-        catch
-        {
-            Response.Write("<br /> *** Cannot work with file.<br />");
-
-        }
-
         Response.Redirect("default.aspx");
-
-
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("default.aspx");
     }
 }
