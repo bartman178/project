@@ -46,7 +46,7 @@ public partial class directory : System.Web.UI.Page
     }
     protected void Edit_Click(object sender, EventArgs e)
     {
-        Response.Redirect("addToDirectory.aspx");
+        Response.Redirect("editDirectory.aspx");
 
     }
     protected void Home_Click(object sender, EventArgs e)
@@ -55,6 +55,6 @@ public partial class directory : System.Web.UI.Page
     }
     protected void Search_Click(object sender, EventArgs e)
     {
-
+       
     }
 }
