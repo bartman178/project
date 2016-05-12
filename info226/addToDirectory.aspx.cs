@@ -10,7 +10,7 @@ using System.IO;
 public partial class _Default : System.Web.UI.Page
 {
     Organisation testOrganisation = new Organisation("place", "build name", "street", "town", "code", "email", "number", "cont name", "cont email", "cont phone", "date", "contractor", "notes", "maintenance");
-    // StoredInformation.organisationDb.Add testOrganisation ; //
+    //StoredInformation.organisationDb.Add testOrganisation ;//
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -36,12 +36,12 @@ public partial class _Default : System.Web.UI.Page
     }
     protected void Submit_Click(object sender, EventArgs e)
     {
-        List<string> myList = new List<string>();
+        List<string> newList = new List<string>();
         TextBox[] textBoxes = { tbCompName, tbBuildName, tbStreetName, tbTown, tbPostCode, tbEmail, tbPhone, tbContactName, tbContactEmail, tbContactPhone, tbLastDate, tbContractor, tbNotes, tbMaintenance};
 
         for (int i = 0; i < textBoxes.Length; i++)
         {
-            myList.Add(Convert.ToString(textBoxes[i].Text));
+            newList.Add(Convert.ToString(textBoxes[i].Text));
         }
 
         Response.Redirect("default.aspx");
