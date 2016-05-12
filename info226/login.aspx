@@ -12,16 +12,23 @@
         {
            font-family: sans-serif, Arial, Helvetica, Verdana;
            background-color: lightblue;
+           text-align: center;
         }
 
         fieldset
         {
              padding: 1em;
+             text-align: center;
         }
 
         legend
         {
             margin-bottom: .5em;
+            text-align: center;
+            margin-left:39%;
+            font-size: x-large;
+            color:red;
+            font-weight:bolder;
         }
 
 
@@ -29,13 +36,14 @@
         {
             margin-right: 0.5em;
             padding-top: 0.5em;
-            text-align: right;
+            text-align: center;
             font-weight: bold;
         }
 
         input
         {
             margin-bottom: .5em;
+
         }
     </style>
 </head>
@@ -43,7 +51,7 @@
     <form id="form1" runat="server">
 
         <fieldset>
-            <legend>Please Login:</legend>
+            <legend>Please Login to Access Happy Buildings</legend>
             <label for="txtUserName">Email:</label>&nbsp;
             <input id="txtUserName" name="txtUserName" type="text" runat="server" /><br />
             <label for="txtUserPass">Password:</label>
@@ -54,9 +62,11 @@
 
             <asp:CheckBox ID="chkPersistCookie" runat="server" AutoPostBack="false" />
             <br />
-            <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" /><p></p>
+            <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" /><p><asp:Button ID="Button2" runat="server" Text="Login Help" OnClick="Button2_Click" /></p>
+            
             <asp:Label ID="lblMsg" ForeColor="red" Font-Name="Verdana" Font-Size="10" runat="server" />
         </fieldset>
+        
     </form>
  
 </body>

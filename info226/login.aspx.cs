@@ -41,4 +41,8 @@ public partial class _Default : System.Web.UI.Page
     {
         lblMsg.Text = msg;
     }
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Server.Transfer("loginHelp.aspx");
+    }
 }
