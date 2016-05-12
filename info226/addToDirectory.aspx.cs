@@ -10,7 +10,7 @@ using System.IO;
 public partial class _Default : System.Web.UI.Page
 {
     Organisation testOrganisation = new Organisation("place", "build name", "street", "town", "code", "email", "number", "cont name", "cont email", "cont phone", "date", "contractor", "notes", "maintenance");
-    // StoredInformation.organisationDb.Add testOrganisation ; fix later //
+    // StoredInformation.organisationDb.Add testOrganisation ; //
 
     protected void Page_Load(object sender, EventArgs e)
     {

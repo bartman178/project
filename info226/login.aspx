@@ -44,9 +44,8 @@
 
         <fieldset>
             <legend>Please Login:</legend>
-            <label for="txtUserName">Email:</label>
-            <input id="txtUserName" name="txtUserName" type="text" runat="server" />
-            <br />
+            <label for="txtUserName">Email:</label>&nbsp;
+            <input id="txtUserName" name="txtUserName" type="text" runat="server" /><br />
             <label for="txtUserPass">Password:</label>
 
             <input id="txtUserPass" name="txtUserPass" type="password" runat="server" />
