@@ -67,12 +67,13 @@ public partial class directory : System.Web.UI.Page
        }
     protected void Edit_Click(object sender, EventArgs e)
     {
+        Session["Org"] = ListBox1.SelectedItem.ToString();
         Response.Redirect("editDirectory.aspx");
 
     }
     protected void Home_Click(object sender, EventArgs e)
     {
-        Server.Transfer("default.aspx");
+        Response.Redirect("default.aspx");
     }
     protected void Search_Click(object sender, EventArgs e)
     {
