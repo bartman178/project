@@ -8,36 +8,36 @@ using System.Web;
 /// </summary>
 public class Organisation
 {
-    public string companyName;
-    public string buildName;
-    public string streetName; 
+    public string name;
+    public string buildname;
+    public string street; 
     public string town;
-    public string postCode; 
+    public int postcode; 
     public string email;
-    public string phoneNumber;
-    public string contactName;
-    public string contactEmail;
-    public string contactPhone;
-    public string lastDate;
-    public string contractor;
+    public int phone;
+    public string contactname;
+    public string contactemail;
+    public int contactphone;
+    public string lastmaintenance;
+    public string lastcontractor;
     public string notes;
-    public string maintenance;
+    public string maintenancework;
 
-	public Organisation(string companyName, string buildName, string streetName, string town, string postCode, string email, string phoneNumber, string contactName, string contactEmail, string contactPhone, string lastDate, string contractor, string notes, string maintenance)
+    public Organisation(string name, string buildname, string street, string town, int postcode, string email, int phone, string contactname, string contactemail, int contactphone, string lastmaintenance, string lastcontractor, string notes, string maintenancework)
 	{
-        this.companyName = companyName;
-        this.buildName = buildName;
-        this.streetName = streetName;
+        this.name = name;
+        this.buildname = buildname;
+        this.street = street;
         this.town = town;
-        this.postCode = postCode;
+        this.postcode = postcode;
         this.email = email;
-        this.phoneNumber = phoneNumber;
-        this.contactName = contactName;
-        this.contactEmail = contactEmail;
-        this.contactPhone = contactPhone;
-        this.lastDate = lastDate;
-        this.contractor = contractor;
+        this.phone = phone;
+        this.contactname = contactname;
+        this.contactemail = contactemail;
+        this.contactphone = contactphone;
+        this.lastmaintenance = lastmaintenance;
+        this.lastcontractor = lastcontractor;
         this.notes = notes;
-        this.maintenance = maintenance;
+        this.maintenancework = maintenancework;
 	}
 }

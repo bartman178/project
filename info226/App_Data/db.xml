@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <organisation>
+    <name>Comp 1</name>
+    <buildname>Build 1</buildname>
+    <street>123 road</street>
+    <town>wellington</town>
+    <postcode>4321</postcode>
+    <email>comp@email.com</email>
+    <phone>1234567</phone>
+    <contactname>James</contactname>
+    <contactemail>q@owner.com</contactemail>
+    <contactphone>0113243</contactphone>
+    <lastmaintenance>11 August 1998</lastmaintenance>
+    <lastcontractor>John</lastcontractor>
+    <notes>painting completed</notes>
+    <maintenancework>needs painting inside and outside</maintenancework>
+  </organisation>
+  <organisation>
+    <name>Comp 2</name>
+    <buildname>Build 2</buildname>
+    <street>123 street</street>
+    <town>wellington</town>
+    <postcode>352</postcode>
+    <email>qwerty@email.com</email>
+    <phone>7654321</phone>
+    <contactname>Jeff</contactname>
+    <contactemail>jeff@owner.com</contactemail>
+    <contactphone>0123243</contactphone>
+    <lastmaintenance>21 November 2015</lastmaintenance>
+    <lastcontractor>Jordan</lastcontractor>
+    <notes>repairs to walls successful</notes>
+    <maintenancework>none</maintenancework>
+  </organisation>
+</data>

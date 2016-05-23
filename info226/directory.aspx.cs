@@ -14,36 +14,57 @@ public partial class directory : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     
     {
-        XmlDocument doc = new XmlDocument();
-        try
-        {
-            string file = @"\directory.xml";
-            string rel_dir = HttpContext.Current.ApplicationInstance.Server.MapPath("~/App_Data");
-            string absolute_path = rel_dir + file;
-
-            if (File.Exists(absolute_path))
+        if (!IsPostBack)
             {
-                doc.Load(absolute_path);
-            }
-            else
-            {
-                Response.Write("<br /> *** Oh no! <br />");
-                Response.Write("*** File " + absolute_path + "does not exist. <br />");
+                XmlDocument doc = new XmlDocument();
+                try
+                {
+                    string file = @"\db.xml";
+                    string rel_dir = HttpContext.Current.ApplicationInstance.Server.MapPath("~/App_Data");
+                    string absolute_path = rel_dir + file;
+
+                    if (File.Exists(absolute_path))
+                    {
+                        doc.Load(absolute_path);
+                    }
+                    else
+                    {
+                        Response.Write("NO FILE");
+                    }
+
+                    XmlNodeList names = doc.GetElementsByTagName("name");
+                    XmlNodeList buildingnames = doc.GetElementsByTagName("buildname");
+                    XmlNodeList streets = doc.GetElementsByTagName("street");
+                    XmlNodeList towns = doc.GetElementsByTagName("town");
+                    XmlNodeList postcodes = doc.GetElementsByTagName("postcode");
+                    XmlNodeList emails = doc.GetElementsByTagName("email");
+                    XmlNodeList phones = doc.GetElementsByTagName("phone");
+                    XmlNodeList contactnames = doc.GetElementsByTagName("contactname");
+                    XmlNodeList contactemails = doc.GetElementsByTagName("contactemail");
+                    XmlNodeList contactphones = doc.GetElementsByTagName("contactphone");
+                    XmlNodeList lastmaninenances = doc.GetElementsByTagName("lastmaintenance");
+                    XmlNodeList lastcontractors = doc.GetElementsByTagName("lastcontractor");
+                    XmlNodeList notes = doc.GetElementsByTagName("notes");
+                    XmlNodeList maintenanceworks = doc.GetElementsByTagName("maintenancework");
+
+                    for (int i = 0; i < names.Count; i++)
+                    {
+                        Organisation org = new Organisation(names[i].InnerText, buildingnames[i].InnerText, streets[i].InnerText, towns[i].InnerText, int.Parse(postcodes[i].InnerText), emails[i].InnerText, int.Parse(phones[i].InnerText), contactnames[i].InnerText, contactemails[i].InnerText, int.Parse(contactphones[i].InnerText), lastmaninenances[i].InnerText, lastcontractors[i].InnerText, notes[i].InnerText, maintenanceworks[i].InnerText);
+                        Database.data.Add(org);
+                    }
+
+                    foreach (Organisation org in Database.data)
+                    {
+                        ListBox1.Items.Add(org.name);
+                    }
+                }
+                catch
+                {
+                    Response.Write("ERROR");
+                }
             }
 
-            XmlNodeList allItems = doc.GetElementsByTagName("OrganisationName");
-
-            for (int i = 0; i < allItems.Count; i++)
-            {
-                ListBox1.Items.Add(allItems[i].InnerText);
-            }
-        }
-        catch
-        {
-            ListBox1.Items.Add("Empty!");
-        }
-
-    }
+       }
     protected void Edit_Click(object sender, EventArgs e)
     {
         Response.Redirect("editDirectory.aspx");

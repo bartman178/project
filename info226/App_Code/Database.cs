@@ -6,7 +6,7 @@ using System.Web;
 /// <summary>
 /// Summary description for Database
 /// </summary>
-public static class StoredInformation
+public static class Database
 {
-    public static List<Organisation> organisationDb = new List<Organisation>();
+    public static List<Organisation> data = new List<Organisation>();
 }
