@@ -24,6 +24,7 @@
     
     </div>
         <asp:Button ID="Home" runat="server" Text="Back To Home" OnClick="Home_Click" />
+        <asp:Button ID="View" runat="server" OnClick="View_Click" Text="View" />
         <asp:Button ID="Edit" runat="server" Text="Edit" OnClick="Edit_Click" style="height: 26px" />
     </form>
 </body>

@@ -79,4 +79,9 @@ public partial class directory : System.Web.UI.Page
     {
        
     }
+    protected void View_Click(object sender, EventArgs e)
+    {
+        Session["Org"] = ListBox1.SelectedItem.ToString();
+        Response.Redirect("viewDirectory.aspx");
+    }
 }
