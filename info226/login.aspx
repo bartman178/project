@@ -62,7 +62,8 @@
 
             <asp:CheckBox ID="chkPersistCookie" runat="server" AutoPostBack="false" />
             <br />
-            <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" /><p><asp:Button ID="Button2" runat="server" Text="Login Help" OnClick="Button2_Click" /></p>
+            <asp:Button ID="btnLogin" CssClass="action-button shadow animate red" runat="server" Text="Login" OnClick="btnLogin_Click" /><p>
+                <asp:Button ID="Button2" CssClass="action-button shadow animate red" runat="server" Text="Login Help" OnClick="Button2_Click" /></p>
             
             <asp:Label ID="lblMsg" ForeColor="red" Font-Name="Verdana" Font-Size="10" runat="server" />
         </fieldset>

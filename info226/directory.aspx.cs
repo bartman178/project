@@ -12,10 +12,9 @@ using System.Windows;
 public partial class directory : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
-    
     {
         if (!IsPostBack)
-            {
+        {
 
             if (!Database.isLoaded)
             {
@@ -69,14 +68,18 @@ public partial class directory : System.Web.UI.Page
             {
                 ListBox1.Items.Add(org.name);
             }
-            }
-       }
+        }
+    }
     protected void Edit_Click(object sender, EventArgs e)
     {
         if (ListBox1.SelectedItem != null)
         {
             Session["Org"] = ListBox1.SelectedItem.ToString();
             Response.Redirect("editDirectory.aspx");
+        }
+        else
+        {
+            Response.Write("No item selected");
         }
 
     }
@@ -86,7 +89,18 @@ public partial class directory : System.Web.UI.Page
     }
     protected void Search_Click(object sender, EventArgs e)
     {
-       
+        ListBox1.Items.Clear();
+        foreach (Organisation org in Database.data)
+        {
+            if (tbSearch.Text == org.name)
+            {
+                ListBox1.Items.Add(org.name);
+            }
+            else
+            {
+                Response.Write("No item found");
+            }
+        }
     }
     protected void View_Click(object sender, EventArgs e)
     {

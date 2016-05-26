@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:Button ID="Button1" runat="server" Text="Back to home" OnClick="Button1_Click" />
+        <asp:Button ID="Button1" CssClass="action-button shadow animate red" runat="server" Text="Back to home" OnClick="Button1_Click" />
         <h1>Help/Contact Information</h1>
         <h2>Website Help</h2>
         <p>Contact support on 1345678</p>

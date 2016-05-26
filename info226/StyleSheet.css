@@ -1,16 +1,73 @@
-﻿h1 { 
-    color:blue;
+﻿h1 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; }
 
-    font-family: Arial;
-}
+
 body {
-    background-color:lightblue;
-  
+    background-color: #347BFF;
      font-family: Arial;
      text-align: center;
      
 }
-p {
-    font-family: Arial;
-    
+p { color: #f8f8f8; font-family: 'Raleway',sans-serif; font-size: 18px; font-weight: 500; line-height: 32px; margin: 0 0 24px; }
+
+h2 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 30px; font-weight: 800; line-height: 36px; margin: 0 0 24px; text-align: center; }
+
+h3 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 24px; font-weight: 800; line-height: 36px; margin: 0 0 24px; text-align: center; }
+
+h4 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 20px; font-weight: 800; line-height: 36px; margin: 0 0 24px; text-align: center; }
+
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
 }
+
+.action-button
+{
+	position: relative;
+	padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: inherit;
+	border-radius: 10px;
+	font-family: Arial;
+	font-size: 16px;
+	color: #FFF;
+	text-decoration: none;	
+}
+
+.blue
+{
+	background-color: #3498DB;
+	border-bottom: 5px solid #2980B9;
+	text-shadow: 0px -2px #2980B9;
+
+}
+
+.red
+{
+	background-color: #E74C3C;
+	border-bottom: 5px solid #BD3E31;
+	text-shadow: 0px -2px #BD3E31;
+        text-align:center;
+}
+
+.green
+{
+	background-color: #82BF56;
+	border-bottom: 5px solid #669644;
+	text-shadow: 0px -2px #669644;
+}
+
+.yellow
+{
+	background-color: #F2CF66;
+	border-bottom: 5px solid #D1B358;
+	text-shadow: 0px -2px #D1B358;
+}
+
+.action-button:active
+{
+	transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+http://codepen.io/cheeriottis/pen/inluv

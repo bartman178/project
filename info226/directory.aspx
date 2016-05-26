@@ -12,7 +12,7 @@
 <body>
     
     <form id="form1" runat="server">
-        <asp:Button ID="Home" runat="server" Text="Back To Home" OnClick="Home_Click" />
+        <asp:Button ID="Home" CssClass="action-button shadow animate red" runat="server" Text="Back To Home" OnClick="Home_Click" />
     <h1>Directory</h1>
     
     <div>
@@ -25,12 +25,12 @@
         </asp:ListBox>
     
     </div>
-        <asp:Button ID="Add" runat="server" Text="Add" OnClick="Add_Click" />
-        <asp:Button ID="View" runat="server" OnClick="View_Click" Text="View" />
-        <asp:Button ID="Edit" runat="server" Text="Edit" OnClick="Edit_Click" style="height: 26px" />
-        <asp:Button ID="Save" runat="server" Text="Save" OnClick="Save_Click" />
+        <asp:Button ID="Add" CssClass="action-button shadow animate red" runat="server" Text="Add" OnClick="Add_Click" />
+        <asp:Button ID="View" CssClass="action-button shadow animate red" runat="server" OnClick="View_Click" Text="View" />
+        <asp:Button ID="Edit" CssClass="action-button shadow animate red" runat="server" Text="Edit" OnClick="Edit_Click" />
+        <asp:Button ID="Save" CssClass="action-button shadow animate red" runat="server" Text="Save" OnClick="Save_Click" />
 
-        <asp:Button ID="Delete" runat="server" Text="Delete" OnClick="Delete_Click" />
+        <asp:Button ID="Delete" CssClass="action-button shadow animate red" runat="server" Text="Delete" OnClick="Delete_Click" />
 
     </form>
 </body>

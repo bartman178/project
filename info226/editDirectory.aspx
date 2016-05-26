@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:Button ID="Button2" runat="server" Text="Back to home" OnClick="Button2_Click" />
+        <asp:Button ID="Button2" CssClass="action-button shadow animate red" runat="server" Text="Back to home" OnClick="Button2_Click" />
         <h1>Editing directory</h1>
         <h2>General information</h2>
 
@@ -32,7 +32,7 @@
             <h4>Last contractor</h4><asp:TextBox ID="tbContractor" runat="server"></asp:TextBox>
             <h4>Building inspector notes</h4><asp:TextBox ID="tbNotes" runat="server" Height="74px" Width="446px"></asp:TextBox>
             <h4>Required maintenance work</h4><asp:TextBox ID="tbMaintenance" runat="server" Height="74px" Width="446px"></asp:TextBox>
-        <br /><br /><asp:Button ID="submit" runat="server" Text="Edit form" OnClick="Submit_Click" />
+        <br /><br /><asp:Button ID="submit" CssClass="action-button shadow animate red" runat="server" Text="Edit form" OnClick="Submit_Click" />
     </div>
     </form>
 </body>

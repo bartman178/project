@@ -49,7 +49,7 @@
             <h4>Required maintenance work</h4>
         <asp:Label ID="lblMaintenance" runat="server" Text=""></asp:Label>
         <br /><br />
-        <asp:Button ID="Button1" runat="server" Text="Return to Directory" OnClick="Button1_Click" />
+        <asp:Button ID="Button1" CssClass="action-button shadow animate red" runat="server" Text="Return to Directory" OnClick="Button1_Click" />
     </div>
     </form>
 </body>
