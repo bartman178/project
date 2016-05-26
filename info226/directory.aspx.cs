@@ -125,40 +125,40 @@ public partial class directory : System.Web.UI.Page
                 buildNode.InnerText = org.buildname;
 
                 XmlNode streetNode = doc.CreateElement("street");
-                buildNode.InnerText = org.street;
+                streetNode.InnerText = org.street;
 
                 XmlNode townNode = doc.CreateElement("town");
-                buildNode.InnerText = org.town;
+                townNode.InnerText = org.town;
 
                 XmlNode postcodeNode = doc.CreateElement("postcode");
-                buildNode.InnerText = org.postcode.ToString();
+                postcodeNode.InnerText = org.postcode.ToString();
 
                 XmlNode emailNode = doc.CreateElement("email");
-                buildNode.InnerText = org.email;
+                emailNode.InnerText = org.email;
 
                 XmlNode phoneNode = doc.CreateElement("phone");
-                buildNode.InnerText = org.phone.ToString();
+                phoneNode.InnerText = org.phone.ToString();
 
                 XmlNode contnameNode = doc.CreateElement("contactname");
-                buildNode.InnerText = org.contactname;
+                contnameNode.InnerText = org.contactname;
 
                 XmlNode contemailNode = doc.CreateElement("contactemail");
-                buildNode.InnerText = org.contactemail;
+                contemailNode.InnerText = org.contactemail;
 
                 XmlNode contphoneNode = doc.CreateElement("contactphone");
-                buildNode.InnerText = org.contactphone.ToString();
+                contphoneNode.InnerText = org.contactphone.ToString();
 
                 XmlNode lastmaintenanceNode = doc.CreateElement("lastmaintenance");
-                buildNode.InnerText = org.lastmaintenance;
+                lastmaintenanceNode.InnerText = org.lastmaintenance;
 
                 XmlNode contractorNode = doc.CreateElement("lastcontractor");
-                buildNode.InnerText = org.lastcontractor;
+                contractorNode.InnerText = org.lastcontractor;
 
                 XmlNode notesNode = doc.CreateElement("notes");
-                buildNode.InnerText = org.notes;
+                notesNode.InnerText = org.notes;
 
                 XmlNode maintenanceNode = doc.CreateElement("maintenancework");
-                buildNode.InnerText = org.maintenancework;
+                maintenanceNode.InnerText = org.maintenancework;
 
                 orgNode.AppendChild(nameNode);
                 orgNode.AppendChild(buildNode);

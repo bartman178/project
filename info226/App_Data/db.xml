@@ -1,19 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <data>
   <organisation>
-    <name>A</name>
-    <buildname>ghghhhghfh</buildname>
-    <street />
-    <town />
-    <postcode />
-    <email />
-    <phone />
-    <contactname />
-    <contactemail />
-    <contactphone />
-    <lastmaintenance />
-    <lastcontractor />
-    <notes />
-    <maintenancework />
+    <name>Comp 1</name>
+    <buildname>Build 1</buildname>
+    <street>123 road</street>
+    <town>wellington</town>
+    <postcode>4321</postcode>
+    <email>comp@email.com</email>
+    <phone>1234567</phone>
+    <contactname>James</contactname>
+    <contactemail>q@owner.com</contactemail>
+    <contactphone>113243</contactphone>
+    <lastmaintenance>11 August 1998</lastmaintenance>
+    <lastcontractor>John</lastcontractor>
+    <notes>painting completed</notes>
+    <maintenancework>needs painting inside and outside</maintenancework>
+  </organisation>
+  <organisation>
+    <name>Comp 2</name>
+    <buildname>Build 2</buildname>
+    <street>123 street</street>
+    <town>wellington</town>
+    <postcode>352</postcode>
+    <email>qwerty@email.com</email>
+    <phone>7654321</phone>
+    <contactname>Jeff</contactname>
+    <contactemail>jeff@owner.com</contactemail>
+    <contactphone>123243</contactphone>
+    <lastmaintenance>21 November 2015</lastmaintenance>
+    <lastcontractor>Jordan</lastcontractor>
+    <notes>repairs to walls successful</notes>
+    <maintenancework>none</maintenancework>
+  </organisation>
+  <organisation>
+    <name>Change Test</name>
+    <buildname>old big building 2</buildname>
+    <street>123 old street</street>
+    <town>wellington</town>
+    <postcode>4224</postcode>
+    <email>tw@jt.com</email>
+    <phone>444</phone>
+    <contactname>John</contactname>
+    <contactemail>jt@gmail.com</contactemail>
+    <contactphone>121324</contactphone>
+    <lastmaintenance>11 July 2009</lastmaintenance>
+    <lastcontractor>Bill</lastcontractor>
+    <notes>all work completed</notes>
+    <maintenancework>needs painting internal and external</maintenancework>
   </organisation>
 </data>
