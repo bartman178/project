@@ -16,6 +16,10 @@ public partial class directory : System.Web.UI.Page
     {
         if (!IsPostBack)
             {
+
+            if (!Database.isLoaded)
+            {
+
                 XmlDocument doc = new XmlDocument();
                 try
                 {
@@ -53,22 +57,27 @@ public partial class directory : System.Web.UI.Page
                         Database.data.Add(org);
                     }
 
-                    foreach (Organisation org in Database.data)
-                    {
-                        ListBox1.Items.Add(org.name);
-                    }
+                    Database.isLoaded = true;
+
                 }
                 catch
                 {
                     Response.Write("ERROR");
                 }
             }
-
+            foreach (Organisation org in Database.data)
+            {
+                ListBox1.Items.Add(org.name);
+            }
+            }
        }
     protected void Edit_Click(object sender, EventArgs e)
     {
-        Session["Org"] = ListBox1.SelectedItem.ToString();
-        Response.Redirect("editDirectory.aspx");
+        if (ListBox1.SelectedItem != null)
+        {
+            Session["Org"] = ListBox1.SelectedItem.ToString();
+            Response.Redirect("editDirectory.aspx");
+        }
 
     }
     protected void Home_Click(object sender, EventArgs e)
@@ -83,5 +92,121 @@ public partial class directory : System.Web.UI.Page
     {
         Session["Org"] = ListBox1.SelectedItem.ToString();
         Response.Redirect("viewDirectory.aspx");
+    }
+    protected void Add_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("addToDirectory.aspx");
+    }
+    protected void Save_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            string file = @"\db.xml";
+            string rel_dir = HttpContext.Current.ApplicationInstance.Server.MapPath("~/App_Data");
+            string absolute_path = rel_dir + file;
+
+            if (File.Exists(absolute_path))
+            {
+                File.Delete(absolute_path);
+            }
+            StreamWriter newFile = File.CreateText(absolute_path);
+
+            XmlDocument doc = new XmlDocument();
+            XmlNode rootNode = doc.CreateElement("data");
+
+            foreach (Organisation org in Database.data)
+            {
+                XmlNode orgNode = doc.CreateElement("organisation");
+
+                XmlNode nameNode = doc.CreateElement("name");
+                nameNode.InnerText = org.name;
+
+                XmlNode buildNode = doc.CreateElement("buildname");
+                buildNode.InnerText = org.buildname;
+
+                XmlNode streetNode = doc.CreateElement("street");
+                buildNode.InnerText = org.street;
+
+                XmlNode townNode = doc.CreateElement("town");
+                buildNode.InnerText = org.town;
+
+                XmlNode postcodeNode = doc.CreateElement("postcode");
+                buildNode.InnerText = org.postcode.ToString();
+
+                XmlNode emailNode = doc.CreateElement("email");
+                buildNode.InnerText = org.email;
+
+                XmlNode phoneNode = doc.CreateElement("phone");
+                buildNode.InnerText = org.phone.ToString();
+
+                XmlNode contnameNode = doc.CreateElement("contactname");
+                buildNode.InnerText = org.contactname;
+
+                XmlNode contemailNode = doc.CreateElement("contactemail");
+                buildNode.InnerText = org.contactemail;
+
+                XmlNode contphoneNode = doc.CreateElement("contactphone");
+                buildNode.InnerText = org.contactphone.ToString();
+
+                XmlNode lastmaintenanceNode = doc.CreateElement("lastmaintenance");
+                buildNode.InnerText = org.lastmaintenance;
+
+                XmlNode contractorNode = doc.CreateElement("lastcontractor");
+                buildNode.InnerText = org.lastcontractor;
+
+                XmlNode notesNode = doc.CreateElement("notes");
+                buildNode.InnerText = org.notes;
+
+                XmlNode maintenanceNode = doc.CreateElement("maintenancework");
+                buildNode.InnerText = org.maintenancework;
+
+                orgNode.AppendChild(nameNode);
+                orgNode.AppendChild(buildNode);
+                orgNode.AppendChild(streetNode);
+                orgNode.AppendChild(townNode);
+                orgNode.AppendChild(postcodeNode);
+                orgNode.AppendChild(emailNode);
+                orgNode.AppendChild(phoneNode);
+                orgNode.AppendChild(contnameNode);
+                orgNode.AppendChild(contemailNode);
+                orgNode.AppendChild(contphoneNode);
+                orgNode.AppendChild(lastmaintenanceNode);
+                orgNode.AppendChild(contractorNode);
+                orgNode.AppendChild(notesNode);
+                orgNode.AppendChild(maintenanceNode);
+
+                rootNode.AppendChild(orgNode);
+            }
+
+            doc.AppendChild(rootNode);
+            doc.Save(newFile);
+
+            newFile.Close();
+        }
+        catch
+        {
+            Response.Write("ERROR");
+        }
+    }
+    protected void Delete_Click(object sender, EventArgs e)
+    {
+        Organisation toRemove = null;
+        foreach (Organisation org in Database.data)
+        {
+            if (org.name.Equals(ListBox1.SelectedItem.ToString()))
+            {
+                toRemove = org;
+            }
+        }
+        if (toRemove != null)
+        {
+            Database.data.Remove(toRemove);
+        }
+
+        ListBox1.Items.Clear();
+        foreach (Organisation org in Database.data)
+        {
+            ListBox1.Items.Add(org.name);
+        }
     }
 }

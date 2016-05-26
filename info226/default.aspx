@@ -15,8 +15,6 @@
        
         <asp:Button ID="Button2" runat="server" Text="Search/view/edit directory" Width="212px" OnClick="Button2_Click" />
         <br /><br />
-        <asp:Button ID="Button3" runat="server" Text="Add to directory" style="text-align: center" OnClick="Button3_Click" />
-        <br /><br />
         <asp:Button ID="Button4" runat="server" Text="Help/contact us" style="text-align: center" Width="218px" OnClick="Button4_Click" />
         <br /><br />
          <asp:Image ID="Image1" runat="server" ImageAlign="Bottom" ImageUrl="Image1.jpg" />

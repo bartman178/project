@@ -17,10 +17,6 @@ public partial class Default2 : System.Web.UI.Page
     {
         Server.Transfer("help.aspx");
     }
-    protected void Button3_Click(object sender, EventArgs e)
-    {
-        Server.Transfer("addToDirectory.aspx");
-    }
     protected void logOut_Click(object sender, EventArgs e)
     {
         Session.RemoveAll();

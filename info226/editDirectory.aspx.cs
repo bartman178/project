@@ -63,6 +63,6 @@ public partial class _Default : System.Web.UI.Page
                 org.maintenancework = tbMaintenance.Text;
             }
         }
-        Response.Redirect("default.aspx");
+        Response.Redirect("directory.aspx");
     }
 }

@@ -9,4 +9,5 @@ using System.Web;
 public static class Database
 {
     public static List<Organisation> data = new List<Organisation>();
+    public static bool isLoaded;
 }
