@@ -13,6 +13,7 @@
         <asp:Button ID="Button2" CssClass="action-button shadow animate red" runat="server" Text="Back to home" OnClick="Button2_Click" />
         <h1>Add to directory</h1>
         <h2>General information</h2>
+        <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
             <h4>Company Name</h4><asp:TextBox ID="tbCompName" runat="server"></asp:TextBox>
             <h4>Building Name</h4><asp:TextBox ID="tbBuildName" runat="server"></asp:TextBox>
         <h2>Physical Address</h2>

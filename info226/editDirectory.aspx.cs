@@ -43,26 +43,33 @@ public partial class _Default : System.Web.UI.Page
     }
     protected void Submit_Click(object sender, EventArgs e)
     {
-        foreach (Organisation org in Database.data)
+        if (string.IsNullOrEmpty(tbCompName.Text) && string.IsNullOrEmpty(tbBuildName.Text) && string.IsNullOrEmpty(tbStreetName.Text) && string.IsNullOrEmpty(tbTown.Text) && string.IsNullOrEmpty(tbPostCode.Text) && string.IsNullOrEmpty(tbEmail.Text) && string.IsNullOrEmpty(tbPhone.Text) && string.IsNullOrEmpty(tbContactName.Text) && string.IsNullOrEmpty(tbContactEmail.Text) && string.IsNullOrEmpty(tbContactPhone.Text) && string.IsNullOrEmpty(tbLastDate.Text) && string.IsNullOrEmpty(tbContractor.Text) && string.IsNullOrEmpty(tbNotes.Text) && string.IsNullOrEmpty(tbMaintenance.Text))
         {
-            if (org.name.Equals(Session["Org"]))
-            {
-                org.name = tbCompName.Text;
-                org.buildname = tbBuildName.Text;
-                org.street = tbStreetName.Text;
-                org.town = tbTown.Text;
-                org.postcode = int.Parse(tbPostCode.Text);
-                org.email = tbEmail.Text;
-                org.phone = int.Parse(tbPhone.Text);
-                org.contactname = tbContactName.Text;
-                org.contactemail = tbContactEmail.Text;
-                org.contactphone = int.Parse(tbContactPhone.Text);
-                org.lastmaintenance = tbLastDate.Text;
-                org.lastcontractor = tbContractor.Text;
-                org.notes = tbNotes.Text;
-                org.maintenancework = tbMaintenance.Text;
-            }
+            lblError.Text = ("Please fill in blank fields");
         }
-        Response.Redirect("directory.aspx");
+        else
+        {
+            foreach (Organisation org in Database.data)
+            {
+                if (org.name.Equals(Session["Org"]))
+                {
+                    org.name = tbCompName.Text;
+                    org.buildname = tbBuildName.Text;
+                    org.street = tbStreetName.Text;
+                    org.town = tbTown.Text;
+                    org.postcode = int.Parse(tbPostCode.Text);
+                    org.email = tbEmail.Text;
+                    org.phone = int.Parse(tbPhone.Text);
+                    org.contactname = tbContactName.Text;
+                    org.contactemail = tbContactEmail.Text;
+                    org.contactphone = int.Parse(tbContactPhone.Text);
+                    org.lastmaintenance = tbLastDate.Text;
+                    org.lastcontractor = tbContractor.Text;
+                    org.notes = tbNotes.Text;
+                    org.maintenancework = tbMaintenance.Text;
+                }
+            }
+            Response.Redirect("directory.aspx");
+        }
     }
 }
