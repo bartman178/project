@@ -5,13 +5,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css"/>
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="-1" />
     <style>
         body
         {
            font-family: sans-serif, Arial, Helvetica, Verdana;
-           background-color: lightblue;
+           background-color: #347BFF;
            text-align: center;
         }
 
@@ -23,21 +24,14 @@
 
         legend
         {
-            margin-bottom: .5em;
-            text-align: center;
-            margin-left:39%;
-            font-size: x-large;
-            color:red;
-            font-weight:bolder;
+
+            color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase;
         }
 
 
         label
         {
-            margin-right: 0.5em;
-            padding-top: 0.5em;
-            text-align: center;
-            font-weight: bold;
+color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 24px; font-weight: 800; line-height: 36px; margin: 0 0 24px; text-align: center;
         }
 
         input
@@ -61,11 +55,11 @@
             <label for="txtUserName">Stay Logged In:</label>
 
             <asp:CheckBox ID="chkPersistCookie" runat="server" AutoPostBack="false" />
-            <br />
+            <br /><br />
             <asp:Button ID="btnLogin" CssClass="action-button shadow animate red" runat="server" Text="Login" OnClick="btnLogin_Click" /><p>
                 <asp:Button ID="Button2" CssClass="action-button shadow animate red" runat="server" Text="Login Help" OnClick="Button2_Click" /></p>
             
-            <asp:Label ID="lblMsg" ForeColor="red" Font-Name="Verdana" Font-Size="10" runat="server" />
+            <asp:Label ID="lblMsg" ForeColor="red" Font-Name="Verdana" Font-Bold="true" Font-Size="20" runat="server" />
         </fieldset>
         
     </form>

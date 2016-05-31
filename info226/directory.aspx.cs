@@ -104,8 +104,15 @@ public partial class directory : System.Web.UI.Page
     }
     protected void View_Click(object sender, EventArgs e)
     {
-        Session["Org"] = ListBox1.SelectedItem.ToString();
-        Response.Redirect("viewDirectory.aspx");
+        if (ListBox1.SelectedItem != null)
+        {
+            Session["Org"] = ListBox1.SelectedItem.ToString();
+            Response.Redirect("viewDirectory.aspx");
+        }
+        else
+        {
+            Response.Write("No item selected");
+        }
     }
     protected void Add_Click(object sender, EventArgs e)
     {
@@ -204,23 +211,30 @@ public partial class directory : System.Web.UI.Page
     }
     protected void Delete_Click(object sender, EventArgs e)
     {
-        Organisation toRemove = null;
-        foreach (Organisation org in Database.data)
+        if (ListBox1.SelectedItem != null)
         {
-            if (org.name.Equals(ListBox1.SelectedItem.ToString()))
+            Organisation toRemove = null;
+            foreach (Organisation org in Database.data)
             {
-                toRemove = org;
+                if (org.name.Equals(ListBox1.SelectedItem.ToString()))
+                {
+                    toRemove = org;
+                }
+            }
+            if (toRemove != null)
+            {
+                Database.data.Remove(toRemove);
+            }
+
+            ListBox1.Items.Clear();
+            foreach (Organisation org in Database.data)
+            {
+                ListBox1.Items.Add(org.name);
             }
         }
-        if (toRemove != null)
+        else
         {
-            Database.data.Remove(toRemove);
-        }
-
-        ListBox1.Items.Clear();
-        foreach (Organisation org in Database.data)
-        {
-            ListBox1.Items.Add(org.name);
+            Response.Write("No item selected to delete");
         }
     }
 }

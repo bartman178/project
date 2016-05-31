@@ -19,7 +19,7 @@ public partial class _Default : System.Web.UI.Page
     }
     protected void Submit_Click(object sender, EventArgs e)
     {
-        if (string.IsNullOrEmpty(tbCompName.Text) && string.IsNullOrEmpty(tbBuildName.Text) && string.IsNullOrEmpty(tbStreetName.Text) && string.IsNullOrEmpty(tbTown.Text) && string.IsNullOrEmpty(tbPostCode.Text) && string.IsNullOrEmpty(tbEmail.Text) && string.IsNullOrEmpty(tbPhone.Text) && string.IsNullOrEmpty(tbContactName.Text) && string.IsNullOrEmpty(tbContactEmail.Text) && string.IsNullOrEmpty(tbContactPhone.Text) && string.IsNullOrEmpty(tbLastDate.Text) && string.IsNullOrEmpty(tbContractor.Text) && string.IsNullOrEmpty(tbNotes.Text) && string.IsNullOrEmpty(tbMaintenance.Text))
+        if (string.IsNullOrEmpty(tbCompName.Text) || string.IsNullOrEmpty(tbBuildName.Text) || string.IsNullOrEmpty(tbStreetName.Text) || string.IsNullOrEmpty(tbTown.Text) || string.IsNullOrEmpty(tbPostCode.Text) || string.IsNullOrEmpty(tbEmail.Text) || string.IsNullOrEmpty(tbPhone.Text) || string.IsNullOrEmpty(tbContactName.Text) || string.IsNullOrEmpty(tbContactEmail.Text) || string.IsNullOrEmpty(tbContactPhone.Text) || string.IsNullOrEmpty(tbLastDate.Text) || string.IsNullOrEmpty(tbContractor.Text) || string.IsNullOrEmpty(tbNotes.Text) || string.IsNullOrEmpty(tbMaintenance.Text))
         {
             lblError.Text = ("Please fill in blank fields");
         }

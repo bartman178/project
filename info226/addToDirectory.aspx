@@ -32,7 +32,9 @@
             <h4>Last contractor</h4><asp:TextBox ID="tbContractor" runat="server"></asp:TextBox>
             <h4>Building inspector notes</h4><asp:TextBox ID="tbNotes" runat="server" Height="74px" Width="446px"></asp:TextBox>
             <h4>Required maintenance work</h4><asp:TextBox ID="tbMaintenance" runat="server" Height="74px" Width="446px"></asp:TextBox>
-        <br /><br /><asp:Button ID="submit" CssClass="action-button shadow animate red" runat="server" Text="Submit form" OnClick="Submit_Click" />
+        <br /><br />
+        <h4>Please make sure all fields are filled in before submitting.</h4>
+        <asp:Button ID="submit" CssClass="action-button shadow animate red" runat="server" Text="Submit form" OnClick="Submit_Click" />
     </div>
     </form>
 </body>
