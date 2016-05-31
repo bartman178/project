@@ -32,7 +32,7 @@ public partial class directory : System.Web.UI.Page
                     }
                     else
                     {
-                        Response.Write("NO FILE");
+                        lblError.Text = ("No file found");
                     }
 
                     XmlNodeList names = doc.GetElementsByTagName("name");
@@ -61,7 +61,7 @@ public partial class directory : System.Web.UI.Page
                 }
                 catch
                 {
-                    Response.Write("ERROR");
+                    lblError.Text = ("ERROR");
                 }
             }
             foreach (Organisation org in Database.data)
@@ -79,7 +79,7 @@ public partial class directory : System.Web.UI.Page
         }
         else
         {
-            Response.Write("No item selected");
+            lblError.Text = ("No item selected");
         }
 
     }
@@ -98,7 +98,7 @@ public partial class directory : System.Web.UI.Page
             }
             else
             {
-                Response.Write("No item found");
+                lblError.Text = ("No items found");
             }
         }
     }
@@ -111,7 +111,7 @@ public partial class directory : System.Web.UI.Page
         }
         else
         {
-            Response.Write("No item selected");
+            lblError.Text = ("No item selected");
         }
     }
     protected void Add_Click(object sender, EventArgs e)
@@ -206,7 +206,7 @@ public partial class directory : System.Web.UI.Page
         }
         catch
         {
-            Response.Write("ERROR");
+            lblError.Text = ("Could not save changes made");
         }
     }
     protected void Delete_Click(object sender, EventArgs e)
@@ -234,7 +234,7 @@ public partial class directory : System.Web.UI.Page
         }
         else
         {
-            Response.Write("No item selected to delete");
+            lblError.Text = ("No item selected");
         }
     }
 }

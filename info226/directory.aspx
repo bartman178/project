@@ -16,10 +16,13 @@
     <h1>Directory</h1>
     
     <div>
-        <h3>Search the Directory</h3> <asp:TextBox ID="tbSearch" runat="server"></asp:TextBox><asp:Button ID="Search" runat="server" Text="Go" OnClick="Search_Click" />
-        <asp:Label ID="lblError" runat="server"></asp:Label>
+        <h3>Search the Directory</h3>
+        <asp:Label ID="lblError" CssClass="error" runat="server"></asp:Label><br />
+        <asp:TextBox ID="tbSearch" CssClass="box" runat="server"></asp:TextBox>
+        <asp:Button ID="Search" CssClass="action-button shadow animate red" runat="server" Text="Go" OnClick="Search_Click" />
+        
         <br />
-        <asp:ListBox ID="ListBox1" runat="server" Height="184px" Width="519px">
+        <asp:ListBox ID="ListBox1" CssClass="box" runat="server" Height="184px" Width="519px">
 
 
         </asp:ListBox>
