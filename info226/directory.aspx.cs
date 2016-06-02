@@ -95,6 +95,7 @@ public partial class directory : System.Web.UI.Page
             if (tbSearch.Text == org.name)
             {
                 ListBox1.Items.Add(org.name);
+                lblError.Text = ("Items found");
             }
             else
             {
